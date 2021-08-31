@@ -6,12 +6,11 @@ namespace PascalTriangle
 
         static void Main(string [] args){
 
-            Console.Write("Max number: ");
+            Console.Write("N° rows: ");
             int maxNumberPT = Int32.Parse(Console.ReadLine());
             
             int numberSpacesPerDigits = combination(maxNumberPT - 1, ((maxNumberPT -1)/2) + 1).ToString().Length;
-            string indSpaces = new string(' ', numberSpacesPerDigits);
-            // Filas, columnas
+            // rows && columns
             for(int i=1; i <= maxNumberPT; i++){
                 string spaces = new string(' ', (maxNumberPT - i) * numberSpacesPerDigits);
                 Console.Write(spaces);
